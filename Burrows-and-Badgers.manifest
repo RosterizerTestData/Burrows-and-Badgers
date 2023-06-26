@@ -1,6 +1,6 @@
 {
   "name": "Burrows & Badgers",
-  "revision": "0.0.1",
+  "revision": "0.0.2",
   "game": "",
   "genre": "fantasy",
   "publisher": "Osprey Games",
@@ -14,29 +14,130 @@
         "templateClass": "Equipment"
       },
       "Equipment": {
+        "aspects": {
+          "Rename": true
+        },
         "stats": {
           "Cost": {
-            "statType": "numeric",
-            "value": 0,
+            "dynamic": false,
             "icons": [
               "two-coins"
             ],
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": true
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
-        },
-        "aspects": {
-          "Rename": true
         }
       },
       "Hand Weapon": {
         "templateClass": "Equipment"
       },
       "Hero": {
+        "allowed": {
+          "classifications": [
+            "Equipment"
+          ]
+        },
+        "aspects": {
+          "Describe": true,
+          "Rename": true
+        },
         "stats": {
-          "Base": {
+          "A": {
+            "dynamic": false,
+            "group": "Basic",
+            "ranks": {
+              "d10": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d10"
+                ],
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
+              }
+            },
+            "statOrder": 7,
             "statType": "rank",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          },
+          "B": {
+            "dynamic": false,
+            "group": "Basic",
+            "ranks": {
+              "d10": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d10"
+                ],
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
+              }
+            },
+            "statOrder": 3,
+            "statType": "rank",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          },
+          "Base": {
+            "dynamic": false,
             "ranks": {
               "30mm": {
                 "order": 0
@@ -48,446 +149,345 @@
                 "order": 2
               }
             },
-            "visibility": "normal",
-            "dynamic": false,
+            "statType": "rank",
             "tracked": false,
-            "value": null
-          },
-          "Cost": {
-            "statType": "numeric",
-            "value": 0,
-            "icons": [
-              "two-coins"
-            ],
-            "group": "Cost",
-            "groupOrder": -1,
-            "visibility": "always",
-            "dynamic": false,
-            "tracked": true
-          },
-          "M": {
-            "statType": "rank",
-            "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
-              "d10": {
-                "order": 4,
-                "icons": [
-                  "d10"
-                ],
-                "format": "{i} {r}"
-              }
-            },
-            "statOrder": 1,
-            "group": "Basic",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": false,
-            "value": null
-          },
-          "S": {
-            "statType": "rank",
             "value": null,
-            "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
-              "d10": {
-                "order": 4,
-                "icons": [
-                  "d10"
-                ],
-                "format": "{i} {r}"
-              }
-            },
-            "statOrder": 2,
-            "group": "Basic",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": false
-          },
-          "B": {
-            "statType": "rank",
-            "value": null,
-            "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
-              "d10": {
-                "order": 4,
-                "icons": [
-                  "d10"
-                ],
-                "format": "{i} {r}"
-              }
-            },
-            "statOrder": 3,
-            "group": "Basic",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": false
-          },
-          "R": {
-            "statType": "rank",
-            "value": null,
-            "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
-              "d10": {
-                "order": 4,
-                "icons": [
-                  "d10"
-                ],
-                "format": "{i} {r}"
-              }
-            },
-            "statOrder": 4,
-            "group": "Basic",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": false
-          },
-          "N": {
-            "statType": "rank",
-            "value": null,
-            "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
-              "d10": {
-                "order": 4,
-                "icons": [
-                  "d10"
-                ],
-                "format": "{i} {r}"
-              }
-            },
-            "statOrder": 5,
-            "group": "Basic",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": false
+            "visibility": "normal"
           },
           "C": {
-            "statType": "rank",
-            "value": null,
+            "dynamic": false,
+            "group": "Basic",
             "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
               "d10": {
-                "order": 4,
+                "format": "{i} {r}",
                 "icons": [
                   "d10"
                 ],
-                "format": "{i} {r}"
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
               }
             },
             "statOrder": 6,
-            "group": "Basic",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": false
-          },
-          "A": {
             "statType": "rank",
+            "tracked": false,
             "value": null,
-            "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
-              "d10": {
-                "order": 4,
-                "icons": [
-                  "d10"
-                ],
-                "format": "{i} {r}"
-              }
-            },
-            "statOrder": 7,
-            "group": "Basic",
-            "visibility": "normal",
+            "visibility": "normal"
+          },
+          "Cost": {
             "dynamic": false,
-            "tracked": false
+            "group": "Cost",
+            "groupOrder": -1,
+            "icons": [
+              "two-coins"
+            ],
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "always"
           },
           "F": {
-            "statType": "rank",
-            "value": null,
+            "dynamic": false,
+            "group": "Basic",
             "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
               "d10": {
-                "order": 4,
+                "format": "{i} {r}",
                 "icons": [
                   "d10"
                 ],
-                "format": "{i} {r}"
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
               }
             },
             "statOrder": 8,
-            "group": "Basic",
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": false
-          },
-          "P": {
             "statType": "rank",
+            "tracked": false,
             "value": null,
+            "visibility": "normal"
+          },
+          "M": {
+            "dynamic": false,
+            "group": "Basic",
             "ranks": {
-              "d4": {
-                "order": 0,
-                "icons": [
-                  "d4"
-                ],
-                "format": "{i} {r}"
-              },
-              "d5": {
-                "order": 1,
-                "icons": [
-                  "perspective-dice-six-faces-random"
-                ],
-                "format": "{i} {r}"
-              },
-              "d6": {
-                "order": 2,
-                "icons": [
-                  "perspective-dice-six"
-                ],
-                "format": "{i} {r}"
-              },
-              "d8": {
-                "order": 3,
-                "icons": [
-                  "dice-eight-faces-eight"
-                ],
-                "format": "{i} {r}"
-              },
               "d10": {
-                "order": 4,
+                "format": "{i} {r}",
                 "icons": [
                   "d10"
                 ],
-                "format": "{i} {r}"
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
+              }
+            },
+            "statOrder": 1,
+            "statType": "rank",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          },
+          "N": {
+            "dynamic": false,
+            "group": "Basic",
+            "ranks": {
+              "d10": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d10"
+                ],
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
+              }
+            },
+            "statOrder": 5,
+            "statType": "rank",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          },
+          "P": {
+            "dynamic": false,
+            "group": "Basic",
+            "ranks": {
+              "d10": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d10"
+                ],
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
               }
             },
             "statOrder": 9,
-            "group": "Basic",
-            "visibility": "normal",
+            "statType": "rank",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          },
+          "R": {
             "dynamic": false,
-            "tracked": false
+            "group": "Basic",
+            "ranks": {
+              "d10": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d10"
+                ],
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
+              }
+            },
+            "statOrder": 4,
+            "statType": "rank",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
+          },
+          "S": {
+            "dynamic": false,
+            "group": "Basic",
+            "ranks": {
+              "d10": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d10"
+                ],
+                "order": 4
+              },
+              "d4": {
+                "format": "{i} {r}",
+                "icons": [
+                  "d4"
+                ],
+                "order": 0
+              },
+              "d5": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six-faces-random"
+                ],
+                "order": 1
+              },
+              "d6": {
+                "format": "{i} {r}",
+                "icons": [
+                  "perspective-dice-six"
+                ],
+                "order": 2
+              },
+              "d8": {
+                "format": "{i} {r}",
+                "icons": [
+                  "dice-eight-faces-eight"
+                ],
+                "order": 3
+              }
+            },
+            "statOrder": 2,
+            "statType": "rank",
+            "tracked": false,
+            "value": null,
+            "visibility": "normal"
           }
-        },
-        "allowed": {
-          "classifications": [
-            "Equipment"
-          ]
-        },
-        "aspects": {
-          "Rename": true,
-          "Describe": true
         }
       },
       "Item": {
@@ -585,193 +585,153 @@
         }
       },
       "Hero§Adder": {
-        "stats": {
-          "Cost": {
-            "value": 36
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d4"
-          },
-          "R": {
-            "value": "d4"
-          },
-          "N": {
-            "value": "d4"
-          },
-          "C": {
-            "value": "d8"
-          },
-          "A": {
-            "value": "d8"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        },
         "assets": {
           "traits": [
             "Ability§Poison",
             "Ability§Unarmed Fighter",
             "Ability§cannot use any Weapons"
           ]
-        }
-      },
-      "Hero§Armadillo (Large)": {
+        },
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
         "stats": {
-          "Cost": {
-            "value": 62
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
+          "A": {
             "value": "d8"
           },
           "B": {
-            "value": "d6"
+            "value": "d4"
           },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d8"
+          "Base": {
+            "value": "30mm"
           },
           "C": {
-            "value": "d6"
+            "value": "d8"
           },
-          "A": {
-            "value": "d6"
+          "Cost": {
+            "value": 36
           },
           "F": {
             "value": "d8"
           },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d4"
+          },
           "P": {
             "value": "d8"
           },
-          "Base": {
-            "value": "40mm"
+          "R": {
+            "value": "d4"
+          },
+          "S": {
+            "value": "d8"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Armadillo (Large)": {
         "assets": {
           "traits": [
             "Ability§Strong",
             "Ability§Tough",
             "Ability§Leap"
           ]
-        }
-      },
-      "Hero§Badger": {
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
         "stats": {
-          "Cost": {
-            "value": 65
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d8"
+          "A": {
+            "value": "d6"
           },
           "B": {
             "value": "d6"
           },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
+          "Base": {
+            "value": "40mm"
           },
           "C": {
-            "value": "d4"
-          },
-          "A": {
             "value": "d6"
+          },
+          "Cost": {
+            "value": 62
           },
           "F": {
             "value": "d8"
           },
-          "P": {
-            "value": "d10"
+          "M": {
+            "value": "d8"
           },
-          "Base": {
-            "value": "50mm"
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Massive Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Badger": {
         "assets": {
           "traits": [
             "Ability§Strong",
             "Ability§Tough",
             "Ability§Fearsome"
           ]
-        }
-      },
-      "Hero§Bat": {
+        },
+        "keywords": {
+          "Keywords": [
+            "Massive Beast"
+          ]
+        },
         "stats": {
-          "Cost": {
-            "value": 27
-          },
-          "M": {
-            "value": "d4"
-          },
-          "S": {
+          "A": {
             "value": "d6"
           },
           "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "50mm"
+          },
+          "C": {
             "value": "d4"
           },
-          "R": {
-            "value": "d4"
+          "Cost": {
+            "value": 65
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d8"
           },
           "N": {
             "value": "d6"
           },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
           "P": {
+            "value": "d10"
+          },
+          "R": {
             "value": "d6"
           },
-          "Base": {
-            "value": "30mm"
+          "S": {
+            "value": "d8"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Small Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Bat": {
         "assets": {
           "traits": [
             "Ability§Flight",
@@ -780,1208 +740,1208 @@
             "Ability§Gifted",
             "Ability§Natural Hunter"
           ]
-        }
-      },
-      "Hero§Beaver": {
-        "stats": {
-          "Cost": {
-            "value": 60
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d4"
-          },
-          "C": {
-            "value": "d5"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d10"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "50mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Massive Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Strong",
-            "Ability§Tough",
-            "Ability§Swim"
-          ]
-        }
-      },
-      "Hero§Bird  (Massive)": {
-        "stats": {
-          "Cost": {
-            "value": 40
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d4"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "50mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Massive Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Flight"
-          ]
-        }
-      },
-      "Hero§Bird (Large)": {
-        "stats": {
-          "Cost": {
-            "value": 35
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d8"
-          },
-          "C": {
-            "value": "d4"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "40mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Flight"
-          ]
-        }
-      },
-      "Hero§Bird (Medium)": {
-        "stats": {
-          "Cost": {
-            "value": 30
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d8"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Flight"
-          ]
-        }
-      },
-      "Hero§Bird (small)": {
-        "stats": {
-          "Cost": {
-            "value": 26
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d4"
-          },
-          "F": {
-            "value": "d4"
-          },
-          "P": {
-            "value": "d4"
-          },
-          "Base": {
-            "value": "30mm"
-          }
         },
         "keywords": {
           "Keywords": [
             "Small Beast"
           ]
         },
-        "assets": {
-          "traits": [
-            "Ability§Flight"
-          ]
-        }
-      },
-      "Hero§Black Rat": {
         "stats": {
-          "Cost": {
-            "value": 33
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d8"
-          },
           "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        }
-      },
-      "Hero§Brown Rat": {
-        "stats": {
-          "Cost": {
-            "value": 42
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "40mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Tough"
-          ]
-        }
-      },
-      "Hero§Cat": {
-        "stats": {
-          "Cost": {
-            "value": 35
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d8"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        }
-      },
-      "Hero§Fennec Fox": {
-        "stats": {
-          "Cost": {
-            "value": 35
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d8"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d8"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "40mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Bloodhound"
-          ]
-        }
-      },
-      "Hero§Ferret": {
-        "stats": {
-          "Cost": {
-            "value": 42
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d8"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d8"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Fearless"
-          ]
-        }
-      },
-      "Hero§Fox": {
-        "stats": {
-          "Cost": {
-            "value": 43
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d8"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "40mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Strong"
-          ]
-        }
-      },
-      "Hero§Frog": {
-        "stats": {
-          "Cost": {
-            "value": 26
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Leap"
-          ]
-        }
-      },
-      "Hero§Green Lizard": {
-        "stats": {
-          "Cost": {
-            "value": 28
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
             "value": "d6"
           },
           "B": {
             "value": "d4"
           },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d8"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
           "Base": {
             "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        }
-      },
-      "Hero§Hare": {
-        "stats": {
-          "Cost": {
-            "value": 53
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d10"
-          },
-          "B": {
-            "value": "d8"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
           },
           "C": {
             "value": "d6"
           },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "40mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Leap",
-            "Ability§Strong"
-          ]
-        }
-      },
-      "Hero§Hedgehog": {
-        "stats": {
           "Cost": {
-            "value": 29
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
+            "value": 27
           },
           "F": {
             "value": "d6"
           },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Spines"
-          ]
-        }
-      },
-      "Hero§Hound (Large)": {
-        "stats": {
-          "Cost": {
-            "value": 45
-          },
           "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
             "value": "d4"
           },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
+          "N": {
             "value": "d6"
           },
           "P": {
-            "value": "d8"
+            "value": "d6"
           },
-          "Base": {
-            "value": "40mm"
+          "R": {
+            "value": "d4"
+          },
+          "S": {
+            "value": "d6"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Beaver": {
         "assets": {
           "traits": [
             "Ability§Strong",
-            "Ability§Tough"
+            "Ability§Tough",
+            "Ability§Swim"
           ]
-        }
-      },
-      "Hero§Hound (Massive)": {
-        "stats": {
-          "Cost": {
-            "value": 65
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d10"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d4"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "50mm"
-          }
         },
         "keywords": {
           "Keywords": [
             "Massive Beast"
           ]
         },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "50mm"
+          },
+          "C": {
+            "value": "d5"
+          },
+          "Cost": {
+            "value": 60
+          },
+          "F": {
+            "value": "d10"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d4"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Bird  (Massive)": {
+        "assets": {
+          "traits": [
+            "Ability§Flight"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Massive Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "50mm"
+          },
+          "C": {
+            "value": "d4"
+          },
+          "Cost": {
+            "value": 40
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Bird (Large)": {
+        "assets": {
+          "traits": [
+            "Ability§Flight"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "C": {
+            "value": "d4"
+          },
+          "Cost": {
+            "value": 35
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Bird (Medium)": {
+        "assets": {
+          "traits": [
+            "Ability§Flight"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 30
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Bird (small)": {
+        "assets": {
+          "traits": [
+            "Ability§Flight"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Small Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d4"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 26
+          },
+          "F": {
+            "value": "d4"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d4"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Black Rat": {
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d8"
+          },
+          "Cost": {
+            "value": 33
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Brown Rat": {
+        "assets": {
+          "traits": [
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 42
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d8"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Cat": {
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 35
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Fennec Fox": {
+        "assets": {
+          "traits": [
+            "Ability§Bloodhound"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d8"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 35
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Ferret": {
+        "assets": {
+          "traits": [
+            "Ability§Fearless"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d8"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 42
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d8"
+          },
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Fox": {
+        "assets": {
+          "traits": [
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 43
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d8"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d8"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Frog": {
+        "assets": {
+          "traits": [
+            "Ability§Leap"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 26
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Green Lizard": {
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d4"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d8"
+          },
+          "Cost": {
+            "value": 28
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Hare": {
+        "assets": {
+          "traits": [
+            "Ability§Leap",
+            "Ability§Strong"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d8"
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 53
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d8"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d10"
+          }
+        }
+      },
+      "Hero§Hedgehog": {
+        "assets": {
+          "traits": [
+            "Ability§Spines"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 29
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Hound (Large)": {
+        "assets": {
+          "traits": [
+            "Ability§Strong",
+            "Ability§Tough"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "C": {
+            "value": "d4"
+          },
+          "Cost": {
+            "value": 45
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Hound (Massive)": {
         "assets": {
           "traits": [
             "Ability§Strong",
             "Ability§Tough",
             "Ability§Natural Hunter"
           ]
-        }
-      },
-      "Hero§Hound (Medium)": {
+        },
+        "keywords": {
+          "Keywords": [
+            "Massive Beast"
+          ]
+        },
         "stats": {
-          "Cost": {
-            "value": 30
-          },
-          "M": {
+          "A": {
             "value": "d6"
-          },
-          "S": {
-            "value": "d8"
           },
           "B": {
             "value": "d6"
           },
-          "R": {
+          "Base": {
+            "value": "50mm"
+          },
+          "C": {
             "value": "d6"
+          },
+          "Cost": {
+            "value": 65
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d8"
           },
           "N": {
             "value": "d6"
           },
-          "C": {
+          "P": {
+            "value": "d8"
+          },
+          "R": {
             "value": "d4"
           },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
+          "S": {
+            "value": "d10"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Hound (Medium)": {
         "assets": {
           "traits": [
             "Ability§Strong"
           ]
-        }
-      },
-      "Hero§Marmot": {
-        "stats": {
-          "Cost": {
-            "value": 23
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d4"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
         },
         "keywords": {
           "Keywords": [
             "Medium Beast"
           ]
-        }
-      },
-      "Hero§Mole": {
+        },
         "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d4"
+          },
           "Cost": {
             "value": 30
           },
+          "F": {
+            "value": "d6"
+          },
           "M": {
-            "value": "d4"
-          },
-          "S": {
             "value": "d6"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d4"
           },
           "N": {
             "value": "d6"
           },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d4"
-          },
-          "F": {
-            "value": "d8"
-          },
           "P": {
             "value": "d6"
           },
-          "Base": {
-            "value": "30mm"
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
           }
-        },
+        }
+      },
+      "Hero§Marmot": {
         "keywords": {
           "Keywords": [
             "Medium Beast"
           ]
         },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d4"
+          },
+          "Cost": {
+            "value": 23
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Mole": {
         "assets": {
           "traits": [
             "Ability§Strong",
             "Ability§Tunneller",
             "Ability§Short Sighted"
           ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d4"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 30
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d4"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d4"
+          },
+          "S": {
+            "value": "d6"
+          }
         }
       },
       "Hero§Mouse": {
+        "keywords": {
+          "Keywords": [
+            "Small Beast"
+          ]
+        },
         "stats": {
-          "Cost": {
-            "value": 24
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
+          "A": {
             "value": "d6"
           },
           "B": {
             "value": "d4"
           },
-          "R": {
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 24
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
             "value": "d6"
           },
           "N": {
             "value": "d6"
           },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
           "P": {
             "value": "d6"
           },
-          "Base": {
-            "value": "30mm"
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Small Beast"
-          ]
         }
       },
       "Hero§Otter": {
-        "stats": {
-          "Cost": {
-            "value": 51
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d8"
-          },
-          "N": {
-            "value": "d8"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "40mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
         "assets": {
           "traits": [
             "Ability§Strong",
             "Ability§Swim"
           ]
-        }
-      },
-      "Hero§Platypus": {
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
         "stats": {
-          "Cost": {
-            "value": 25
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
+          "A": {
             "value": "d6"
           },
           "B": {
-            "value": "d4"
-          },
-          "R": {
             "value": "d6"
           },
-          "N": {
-            "value": "d6"
+          "Base": {
+            "value": "40mm"
           },
           "C": {
             "value": "d6"
           },
-          "A": {
-            "value": "d6"
+          "Cost": {
+            "value": 51
           },
           "F": {
-            "value": "d6"
+            "value": "d8"
+          },
+          "M": {
+            "value": "d8"
+          },
+          "N": {
+            "value": "d8"
           },
           "P": {
-            "value": "d6"
+            "value": "d8"
           },
-          "Base": {
-            "value": "30mm"
+          "R": {
+            "value": "d8"
+          },
+          "S": {
+            "value": "d8"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Platypus": {
         "assets": {
           "traits": [
             "Ability§Swim"
           ]
-        }
-      },
-      "Hero§Rabbit": {
-        "stats": {
-          "Cost": {
-            "value": 31
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d6"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
         },
         "keywords": {
           "Keywords": [
             "Medium Beast"
           ]
         },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d4"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 25
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Rabbit": {
         "assets": {
           "traits": [
             "Ability§Leap"
           ]
-        }
-      },
-      "Hero§Racoon (Large)": {
+        },
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
         "stats": {
-          "Cost": {
-            "value": 40
-          },
-          "M": {
+          "A": {
             "value": "d6"
-          },
-          "S": {
-            "value": "d8"
           },
           "B": {
-            "value": "d4"
-          },
-          "R": {
             "value": "d6"
           },
-          "N": {
-            "value": "d6"
+          "Base": {
+            "value": "30mm"
           },
           "C": {
             "value": "d6"
           },
-          "A": {
-            "value": "d6"
+          "Cost": {
+            "value": 31
           },
           "F": {
+            "value": "d6"
+          },
+          "M": {
             "value": "d8"
+          },
+          "N": {
+            "value": "d6"
           },
           "P": {
-            "value": "d8"
+            "value": "d6"
           },
-          "Base": {
-            "value": "40mm"
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Racoon (Large)": {
         "assets": {
           "traits": [
             "Ability§Strong"
           ]
-        }
-      },
-      "Hero§Raptor (Large)": {
-        "stats": {
-          "Cost": {
-            "value": 50
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d4"
-          },
-          "R": {
-            "value": "d4"
-          },
-          "N": {
-            "value": "d8"
-          },
-          "C": {
-            "value": "d4"
-          },
-          "A": {
-            "value": "d8"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "40mm"
-          }
         },
         "keywords": {
           "Keywords": [
             "Large Beast"
           ]
         },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d4"
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 40
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Raptor (Large)": {
         "assets": {
           "traits": [
             "Ability§Flight",
@@ -1989,49 +1949,99 @@
             "Ability§Strong",
             "Ability§Natural Hunter"
           ]
-        }
-      },
-      "Hero§Raptor (Massive)": {
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
         "stats": {
-          "Cost": {
-            "value": 64
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d10"
+          "A": {
+            "value": "d8"
           },
           "B": {
-            "value": "d6"
-          },
-          "R": {
             "value": "d4"
           },
-          "N": {
-            "value": "d6"
+          "Base": {
+            "value": "40mm"
           },
           "C": {
             "value": "d4"
           },
-          "A": {
-            "value": "d8"
+          "Cost": {
+            "value": 50
           },
           "F": {
             "value": "d8"
           },
-          "P": {
-            "value": "d10"
+          "M": {
+            "value": "d6"
           },
-          "Base": {
-            "value": "50mm"
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d4"
+          },
+          "S": {
+            "value": "d8"
           }
+        }
+      },
+      "Hero§Raptor (Massive)": {
+        "assets": {
+          "traits": [
+            "Ability§Flight",
+            "Ability§Unarmed Fighter",
+            "Ability§Strong",
+            "Ability§Natural Hunter"
+          ]
         },
         "keywords": {
           "Keywords": [
             "Massive Beast"
           ]
         },
+        "stats": {
+          "A": {
+            "value": "d8"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "50mm"
+          },
+          "C": {
+            "value": "d4"
+          },
+          "Cost": {
+            "value": 64
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d10"
+          },
+          "R": {
+            "value": "d4"
+          },
+          "S": {
+            "value": "d10"
+          }
+        }
+      },
+      "Hero§Raptor (Medium)": {
         "assets": {
           "traits": [
             "Ability§Flight",
@@ -2039,141 +2049,91 @@
             "Ability§Strong",
             "Ability§Natural Hunter"
           ]
-        }
-      },
-      "Hero§Raptor (Medium)": {
-        "stats": {
-          "Cost": {
-            "value": 42
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d4"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d8"
-          },
-          "A": {
-            "value": "d8"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
         },
         "keywords": {
           "Keywords": [
             "Medium Beast"
           ]
         },
-        "assets": {
-          "traits": [
-            "Ability§Flight",
-            "Ability§Unarmed Fighter",
-            "Ability§Strong",
-            "Ability§Natural Hunter"
-          ]
-        }
-      },
-      "Hero§Shrew": {
         "stats": {
-          "Cost": {
-            "value": 28
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
+          "A": {
+            "value": "d8"
           },
           "B": {
             "value": "d6"
           },
-          "R": {
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d8"
+          },
+          "Cost": {
+            "value": 42
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
             "value": "d6"
           },
           "N": {
             "value": "d6"
           },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d8"
-          },
           "P": {
             "value": "d6"
           },
-          "Base": {
-            "value": "30mm"
+          "R": {
+            "value": "d4"
+          },
+          "S": {
+            "value": "d8"
           }
-        },
+        }
+      },
+      "Hero§Shrew": {
         "keywords": {
           "Keywords": [
             "Small Beast"
           ]
-        }
-      },
-      "Hero§Shrew Knight Errant": {
+        },
         "stats": {
-          "Cost": {
-            "value": 62
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d10"
+          "A": {
+            "value": "d6"
           },
           "B": {
             "value": "d6"
           },
-          "R": {
-            "value": "d4"
-          },
-          "N": {
-            "value": "d8"
+          "Base": {
+            "value": "30mm"
           },
           "C": {
-            "value": "d8"
+            "value": "d6"
           },
-          "A": {
-            "value": "d8"
+          "Cost": {
+            "value": 28
           },
           "F": {
             "value": "d8"
           },
-          "P": {
-            "value": "d8"
+          "M": {
+            "value": "d6"
           },
-          "Base": {
-            "value": "40mm"
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Shrew Knight Errant": {
         "assets": {
           "traits": [
             "Ability§Strong",
@@ -2181,323 +2141,323 @@
             "Ability§Fearsome",
             "Ability§Natural Hunter"
           ]
-        }
-      },
-      "Hero§Siamese Cat": {
-        "stats": {
-          "Cost": {
-            "value": 35
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d8"
-          },
-          "P": {
-            "value": "d8"
-          },
-          "Base": {
-            "value": "30mm"
-          }
         },
         "keywords": {
           "Keywords": [
-            "Medium Beast"
+            "Large Beast"
           ]
-        }
-      },
-      "Hero§Squirrel": {
+        },
         "stats": {
-          "Cost": {
-            "value": 34
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
+          "A": {
+            "value": "d8"
           },
           "B": {
             "value": "d6"
           },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d8"
+          "Base": {
+            "value": "40mm"
           },
           "C": {
             "value": "d8"
           },
-          "A": {
-            "value": "d8"
+          "Cost": {
+            "value": 62
           },
           "F": {
             "value": "d8"
           },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        }
-      },
-      "Hero§Stoat": {
-        "stats": {
-          "Cost": {
-            "value": 36
-          },
           "M": {
             "value": "d8"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
           },
           "N": {
             "value": "d8"
           },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
           "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
-        },
-        "keywords": {
-          "Keywords": [
-            "Medium Beast"
-          ]
-        },
-        "assets": {
-          "traits": [
-            "Ability§Fearless"
-          ]
-        }
-      },
-      "Hero§Toad": {
-        "stats": {
-          "Cost": {
-            "value": 52
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d6"
-          },
-          "B": {
-            "value": "d6"
+            "value": "d8"
           },
           "R": {
             "value": "d4"
           },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
+          "S": {
             "value": "d10"
-          },
+          }
+        }
+      },
+      "Hero§Siamese Cat": {
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
           "A": {
             "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 35
           },
           "F": {
             "value": "d8"
           },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
           "P": {
             "value": "d8"
           },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Squirrel": {
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d8"
+          },
+          "B": {
+            "value": "d6"
+          },
           "Base": {
             "value": "30mm"
+          },
+          "C": {
+            "value": "d8"
+          },
+          "Cost": {
+            "value": 34
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d6"
           }
+        }
+      },
+      "Hero§Stoat": {
+        "assets": {
+          "traits": [
+            "Ability§Fearless"
+          ]
         },
         "keywords": {
           "Keywords": [
             "Medium Beast"
           ]
         },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 36
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d8"
+          },
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d6"
+          },
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Toad": {
         "assets": {
           "traits": [
             "Ability§Strong",
             "Ability§Tough",
             "Ability§Natural Hunter"
           ]
-        }
-      },
-      "Hero§Tortoise": {
-        "stats": {
-          "Cost": {
-            "value": 36
-          },
-          "M": {
-            "value": "d6"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d6"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
         },
         "keywords": {
           "Keywords": [
             "Medium Beast"
           ]
         },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d10"
+          },
+          "Cost": {
+            "value": 52
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d4"
+          },
+          "S": {
+            "value": "d6"
+          }
+        }
+      },
+      "Hero§Tortoise": {
         "assets": {
           "traits": [
             "Ability§Tough"
           ]
-        }
-      },
-      "Hero§Weasel": {
-        "stats": {
-          "Cost": {
-            "value": 36
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d8"
-          },
-          "B": {
-            "value": "d6"
-          },
-          "R": {
-            "value": "d6"
-          },
-          "N": {
-            "value": "d8"
-          },
-          "C": {
-            "value": "d6"
-          },
-          "A": {
-            "value": "d6"
-          },
-          "F": {
-            "value": "d6"
-          },
-          "P": {
-            "value": "d6"
-          },
-          "Base": {
-            "value": "30mm"
-          }
         },
         "keywords": {
           "Keywords": [
             "Medium Beast"
           ]
         },
-        "assets": {
-          "traits": [
-            "Ability§Fearless"
-          ]
-        }
-      },
-      "Hero§Wildcat": {
         "stats": {
-          "Cost": {
-            "value": 62
-          },
-          "M": {
-            "value": "d8"
-          },
-          "S": {
-            "value": "d10"
+          "A": {
+            "value": "d6"
           },
           "B": {
             "value": "d6"
           },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 36
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d6"
+          },
+          "N": {
+            "value": "d6"
+          },
+          "P": {
+            "value": "d6"
+          },
           "R": {
-            "value": "d4"
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
+          }
+        }
+      },
+      "Hero§Weasel": {
+        "assets": {
+          "traits": [
+            "Ability§Fearless"
+          ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Medium Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d6"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "30mm"
+          },
+          "C": {
+            "value": "d6"
+          },
+          "Cost": {
+            "value": 36
+          },
+          "F": {
+            "value": "d6"
+          },
+          "M": {
+            "value": "d8"
           },
           "N": {
             "value": "d8"
           },
-          "C": {
-            "value": "d8"
-          },
-          "A": {
-            "value": "d8"
-          },
-          "F": {
-            "value": "d8"
-          },
           "P": {
-            "value": "d8"
+            "value": "d6"
           },
-          "Base": {
-            "value": "40mm"
+          "R": {
+            "value": "d6"
+          },
+          "S": {
+            "value": "d8"
           }
-        },
-        "keywords": {
-          "Keywords": [
-            "Large Beast"
-          ]
-        },
+        }
+      },
+      "Hero§Wildcat": {
         "assets": {
           "traits": [
             "Ability§Strong",
@@ -2505,6 +2465,46 @@
             "Ability§Fearsome",
             "Ability§Natural Hunter"
           ]
+        },
+        "keywords": {
+          "Keywords": [
+            "Large Beast"
+          ]
+        },
+        "stats": {
+          "A": {
+            "value": "d8"
+          },
+          "B": {
+            "value": "d6"
+          },
+          "Base": {
+            "value": "40mm"
+          },
+          "C": {
+            "value": "d8"
+          },
+          "Cost": {
+            "value": 62
+          },
+          "F": {
+            "value": "d8"
+          },
+          "M": {
+            "value": "d8"
+          },
+          "N": {
+            "value": "d8"
+          },
+          "P": {
+            "value": "d8"
+          },
+          "R": {
+            "value": "d4"
+          },
+          "S": {
+            "value": "d10"
+          }
         }
       },
       "Item§Bodkin Arrows": {
@@ -2649,14 +2649,14 @@
         },
         "stats": {
           "Cost": {
-            "statType": "numeric",
-            "value": 0,
+            "dynamic": false,
             "icons": [
               "two-coins"
             ],
-            "visibility": "normal",
-            "dynamic": false,
-            "tracked": true
+            "statType": "numeric",
+            "tracked": true,
+            "value": 0,
+            "visibility": "normal"
           }
         }
       }
