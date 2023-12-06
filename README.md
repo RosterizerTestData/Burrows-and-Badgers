@@ -1,3 +1,3 @@
 # Burrows & Badgers
 
-https://raw.githubusercontent.com/RosterizerTestData/Burrows-and-Badgers/main/Burrows-and-Badgers.manifest
+https://raw.githubusercontent.com/RosterizerTestData/Burrows-and-Badgers/main/Burrows-and-Badgers.rulebook

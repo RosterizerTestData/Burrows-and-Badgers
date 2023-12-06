@@ -7,7 +7,7 @@
   "url": "https://burrowsandbadgers.com/",
   "notes": "0.0.1 — Initial data input",
   "wip": true,
-  "manifest": {
+  "rulebook": {
     "assetTaxonomy": {
       "Ability": {},
       "Armour": {
